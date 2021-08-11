@@ -4,7 +4,7 @@ import Resource.Data.PayloadsAndEndPoint;
 import Resource.Utility.ValidationMethod;
 import org.testng.annotations.Test;
 
-public class deleteResourceValidations {
+public class DeleteResourceValidations {
     PayloadsAndEndPoint peData= new PayloadsAndEndPoint();
 
     @Test

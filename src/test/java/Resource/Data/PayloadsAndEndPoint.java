@@ -10,6 +10,8 @@ public class PayloadsAndEndPoint {
     public String todosEndPoint ="/todos";
     public String usersEndPoint ="/users";
 
+    public String swaggerPetURI = "https://petstore.swagger.io";
+    public String petEndPoint = "/v2/pet";
 
 
 
@@ -87,7 +89,31 @@ public class PayloadsAndEndPoint {
                 "    }";
 
         return payload;
+    }
+
+    public static String payloadSwagger() {
+        String payload="{\n" +
+                "  \"id\": 12345,\n" +
+                "  \"category\": {\n" +
+                "    \"id\": 1,\n" +
+                "    \"name\": \"dog\"\n" +
+                "  },\n" +
+                "  \"name\": \"snoopie\",\n" +
+                "  \"photoUrls\": [\n" +
+                "    \"string\"\n" +
+                "  ],\n" +
+                "  \"tags\": [\n" +
+                "    {\n" +
+                "      \"id\": 0,\n" +
+                "      \"name\": \"string\"\n" +
+                "    }\n" +
+                "  ],\n" +
+                "  \"status\": \"pending\"\n" +
+                "}";
+        return payload;
 
     }
+
+
 
 }

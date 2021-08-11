@@ -9,40 +9,28 @@ public class CountResourceValidations {
     PayloadsAndEndPoint peData= new PayloadsAndEndPoint();
 
     @Test
-    public void validatePostsResourceCount()
-    {
+    public void validatePostsResourceCount() {
        System.out.println("Resource Count is "+ ValidationMethod.getResourcesNumber(peData.baseURI, peData.postsEndPoint));
-
     }
     @Test
-    public void validateCommentsResourceCount()
-    {
+    public void validateCommentsResourceCount() {
         System.out.println("Resource Count is "+ValidationMethod.getResourcesNumber(peData.baseURI, peData.commentsEndPoint));
-
     }
     @Test
-    public void validateAlbumsResourceCount()
-    {
+    public void validateAlbumsResourceCount() {
         System.out.println("Resource Count is "+ValidationMethod.getResourcesNumber(peData.baseURI, peData.albumsEndPoint));
-
     }
     @Test
-    public void validatePhotosResourceCount()
-    {
+    public void validatePhotosResourceCount() {
         System.out.println("Resource Count is "+ValidationMethod.getResourcesNumber(peData.baseURI, peData.photosEndPoint));
-
     }
     @Test
-    public void validateToDosResourceCount()
-    {
+    public void validateToDosResourceCount() {
         System.out.println("Resource Count is "+ValidationMethod.getResourcesNumber(peData.baseURI, peData.todosEndPoint));
-
     }
     @Test
-    public void validateUsersResourceCount()
-    {
+    public void validateUsersResourceCount() {
         System.out.println("Resource Count is "+ValidationMethod.getResourcesNumber(peData.baseURI, peData.usersEndPoint));
-
     }
 
 }
