@@ -1,4 +1,4 @@
-package com.apitask.hometasktwo;
+package com.apitask.hometasks;
 
 import Resource.Data.PayloadsAndEndPoint;
 import Resource.Utility.ValidationMethod;
