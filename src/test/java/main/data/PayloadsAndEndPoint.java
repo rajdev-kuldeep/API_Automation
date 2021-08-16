@@ -1,18 +1,24 @@
-package Resource.Data;
+package main.data;
 
 public class PayloadsAndEndPoint {
 
-    public String baseURI = "https://jsonplaceholder.typicode.com";
-    public String postsEndPoint ="/posts";
-    public String commentsEndPoint ="/comments";
-    public String albumsEndPoint ="/albums";
-    public String photosEndPoint ="/photos";
-    public String todosEndPoint ="/todos";
-    public String usersEndPoint ="/users";
+    public static final String baseURI = "https://jsonplaceholder.typicode.com";
+    public static final String postsEndPoint ="/posts";
+    public static final String commentsEndPoint ="/comments";
+    public static final String albumsEndPoint ="/albums";
+    public static final String photosEndPoint ="/photos";
+    public static final String todosEndPoint ="/todos";
+    public static final String usersEndPoint ="/users";
 
-    public String swaggerPetURI = "https://petstore.swagger.io";
-    public String petEndPoint = "/v2/pet";
+    public static final String swaggerPetURI = "https://petstore.swagger.io";
+    public static final String petEndPoint = "/v2/pet";
 
+    public static final String employeeURI ="http://dummy.restapiexample.com/api/v1";
+    public static final String allEmployeeEndPoint = "/employees";
+    public static final String createEmployeeEndPoint = "/create";
+    public static final String employeeEndPoint = "/employee";
+    public static final String updateEmployeeEndpoint = "/update";
+    public static final String deleteEmployeeEndpoint = "/delete";
 
 
     public static String payloadPosts() {
@@ -114,6 +120,15 @@ public class PayloadsAndEndPoint {
 
     }
 
+    public static String payloadEmployee(){
+        String payload ="{\"name\":\"Kuldeep Rajdev\",\"salary\":\"54600\",\"age\":\"23\"}";
+        return payload;
+    }
+
+    public static String payloadUpdatedEmployee(){
+        String payload ="{\"name\":\"Kuldeep Rajdev\",\"salary\":\"546001\",\"age\":\"47\"}";
+        return payload;
+    }
 
 
 }

@@ -1,24 +1,23 @@
 package com.apitask.hometasks;
 
-import Resource.Data.PayloadsAndEndPoint;
-import Resource.Utility.ValidationMethod;
+import main.data.PayloadsAndEndPoint;
+import main.utility.ValidationMethod;
 import io.restassured.response.Response;
 import org.apache.http.HttpStatus;
 import org.testng.Assert;
 import org.testng.annotations.Test;
 
 public class PetDogValidations {
-    PayloadsAndEndPoint peData= new PayloadsAndEndPoint();
 
     @Test
     public void createPetDogResource() {
-        System.out.println("Created Response is "+ ValidationMethod.createResource(peData.swaggerPetURI,peData.petEndPoint,peData.payloadSwagger(),HttpStatus.SC_OK));
+        System.out.println("Created Response is "+ ValidationMethod.createResource(PayloadsAndEndPoint.swaggerPetURI,PayloadsAndEndPoint.petEndPoint,PayloadsAndEndPoint.payloadSwagger(),HttpStatus.SC_OK));
     }
 
     @Test
     public void validatePetResource() {
         createPetDogResource();
-        Response response = ValidationMethod.getResource(peData.swaggerPetURI, "/v2/pet/12345");
+        Response response = ValidationMethod.getResource(PayloadsAndEndPoint.swaggerPetURI, "/v2/pet/12345");
         ValidationMethod.validateStatusCode(response, 200);
         ValidationMethod.validateContentType(response, "application/json");
         String categoryName = ValidationMethod.getEmbeddedPathValue(response, "category", "name");
