@@ -101,4 +101,23 @@ public class ValidationMethod {
         return headerValue.equals(expectedValue);
     }
 
+    public static Response getResourceTwoQueryParam(String baseURI, String endPoint,  String queryParamKey1, String queryParam1, String queryParamKey2, String queryParam2) {
+        Response response = given().baseUri(baseURI).queryParam(queryParamKey1, queryParam1).queryParam(queryParamKey2, queryParam2).log().all().when().get(endPoint);
+        response.then().log().all().assertThat().statusCode(HttpStatus.SC_OK);
+        return response;
+
+    }
+
+    public static Response getResourceThreeQueryParam(String baseURI, String endPoint,  String queryParamKey1, Object queryParam1, String queryParamKey2, Object queryParam2, String queryParamKey3, String queryParam3) {
+        Response response = given().baseUri(baseURI).queryParam(queryParamKey1, queryParam1).queryParam(queryParamKey2, queryParam2).queryParam(queryParamKey3, queryParam3).log().all().when().get(endPoint);
+        response.then().log().all().assertThat().statusCode(HttpStatus.SC_OK);
+        return response;
+
+    }
+
+    public static Object getPathValue(Response response, String path){
+        Object returnValue =  response.path("\"" +path+ "\"");
+        return returnValue;
+    }
+
 }

@@ -23,6 +23,10 @@ public class PayloadsAndEndPoint {
     public static final String eventURI = "https://events.epam.com/api/v2";
     public static final String eventsEndPoint = "/events";
 
+    public static final String weatherURI = "http://api.openweathermap.org/data/2.5";
+    public static final String weatherEndPoint = "/weather";
+    public static final String weatherAPIKey = "c6da686014564a177590ed50a6c8c850";
+
 
     public static String payloadPosts() {
         String payload="{\n" +
