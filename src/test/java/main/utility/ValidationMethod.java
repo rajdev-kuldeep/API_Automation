@@ -53,7 +53,7 @@ public class ValidationMethod {
     }
 
     public static Response getResource(String baseURI, String endPoint) {
-        Response response = given().baseUri(baseURI).when().get(endPoint);
+        Response response = given().baseUri(baseURI).headers("Content-Type", "application/json" ).when().get(endPoint);
         response.then().log().all().assertThat().statusCode(HttpStatus.SC_OK);
         return response;
     }
@@ -100,4 +100,5 @@ public class ValidationMethod {
         String headerValue = response.header(headerKey);
         return headerValue.equals(expectedValue);
     }
+
 }

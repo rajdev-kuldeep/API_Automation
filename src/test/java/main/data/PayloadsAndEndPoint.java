@@ -20,6 +20,9 @@ public class PayloadsAndEndPoint {
     public static final String updateEmployeeEndpoint = "/update";
     public static final String deleteEmployeeEndpoint = "/delete";
 
+    public static final String eventURI = "https://events.epam.com/api/v2";
+    public static final String eventsEndPoint = "/events";
+
 
     public static String payloadPosts() {
         String payload="{\n" +
